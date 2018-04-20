@@ -1,0 +1,44 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Voice
+ *
+ * @ORM\Table(name="voice")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\VoiceRepository")
+ */
+class Voice
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(name="key_word", type="string")
+     */
+    private $key_word;
+
+    /**
+     * @ORM\Column(name="action", type="string")
+     */
+    private $action;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

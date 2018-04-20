@@ -1,0 +1,173 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * TasksWithCategories
+ *
+ * @ORM\Table(name="tasks_with_categories")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\TasksWithCategoriesRepository")
+ */
+class TasksWithCategories
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(name="task_id", type="boolean")
+     */
+    private $task_id;
+
+    /**
+     * @ORM\Column(name="categories_id", type="boolean")
+     */
+    private $categorie_id;
+
+    /**
+     * @ORM\Column(name="active", type="boolean")
+     */
+    private $active;
+
+    /**
+     * @ORM\Column(name="created_at", type="datetime")
+     */
+    private $created_at;
+
+    /**
+     * @ORM\Column(name="updated_at", type="datetime")
+     */
+    private $updated_at;
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set task_id
+     *
+     * @param integer $taskId
+     * @return TasksWithCategories
+     */
+    public function setTaskId($taskId)
+    {
+        $this->task_id = $taskId;
+
+        return $this;
+    }
+
+    /**
+     * Get task_id
+     *
+     * @return integer
+     */
+    public function getTaskId()
+    {
+        return $this->task_id;
+    }
+
+    /**
+     * Set categorie_id
+     *
+     * @param integer $categorieId
+     * @return TasksWithCategories
+     */
+    public function setCategorieId($categorieId)
+    {
+        $this->categorie_id = $categorieId;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie_id
+     *
+     * @return integer 
+     */
+    public function getCategorieId()
+    {
+        return $this->categorie_id;
+    }
+
+    /**
+     * Set active
+     *
+     * @param boolean $active
+     * @return TasksWithCategories
+     */
+    public function setActive($active)
+    {
+        $this->active = $active;
+
+        return $this;
+    }
+
+    /**
+     * Get active
+     *
+     * @return boolean 
+     */
+    public function getActive()
+    {
+        return $this->active;
+    }
+
+    /**
+     * Set created_at
+     *
+     * @param \DateTime $createdAt
+     * @return TasksWithCategories
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->created_at = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get created_at
+     *
+     * @return \DateTime 
+     */
+    public function getCreatedAt()
+    {
+        return $this->created_at;
+    }
+
+    /**
+     * Set updated_at
+     *
+     * @param \DateTime $updatedAt
+     * @return TasksWithCategories
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updated_at = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updated_at
+     *
+     * @return \DateTime 
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updated_at;
+    }
+}
